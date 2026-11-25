@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@import "./styles/tokens.css";
+@import "./styles/analog.css";
+
+@theme inline {
+  --color-terracotta: var(--st-terracotta);
+  --color-terracotta-deep: var(--st-terracotta-deep);
+  --color-champagne: var(--st-champagne);
+  --color-champagne-muted: var(--st-champagne-muted);
+  --color-cream: var(--st-cream);
+  --color-cream-light: var(--st-cream-light);
+  --color-kodak-tan: var(--st-kodak-tan);
+  --color-espresso: var(--st-espresso);
+  --color-espresso-deep: var(--st-espresso-deep);
+  --color-teal: var(--st-teal);
+  --color-dusty-rose: var(--st-dusty-rose);
+
+  --font-editorial: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-hero: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--st-bg-canvas);
+  color: var(--st-ink-primary);
+  overflow-x: clip;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--st-bg-canvas);
+  color: var(--st-ink-primary);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+/* Global Typography Helpers */
+.type-hero {
+  font-family: var(--font-hero);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+}
+
+.type-display {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+}
+
+.type-h2 {
+  font-family: var(--font-editorial);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+.type-h3 {
+  font-family: var(--font-editorial);
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+}
+
+.type-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.type-nav {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Visible Keyboard Focus */
+:focus-visible {
+  outline: 2px solid var(--st-champagne);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
